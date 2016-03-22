@@ -5,10 +5,49 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+    <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+
+  <!-- font awsome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <script type="text/javascript">
+
+function settime(num) {
+  var ret;
+
+  if(num<10){ret = "0" + num;}
+  else{ret = num};
+
+  return ret;
+
+}
+function showClock1() {
+   var nowTime = new Date();
+   var nowHour = settime(nowTime.getHours());
+   var nowMin = settime(nowTime.getMinutes());
+   var nowSec = settime(nowTime.getSeconds());
+   var msg = nowHour + " : " + nowMin  ;
+   document.getElementById("Clock").innerHTML = msg;
+}
+setInterval('showClock1()',1000);
+  </script>
 </head>
 <body>
 
-<%= yield %>
+<%= render 'layouts/header' %>
+
+<div class="container">
+  <%= yield %>
+</div>
+
+<%= render 'layouts/footer' %>
+
 
 </body>
 </html>

@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'rails',        '4.2.2'
 gem 'sass-rails',   '5.0.2'
+gem 'materialize-sass'
+gem 'bcrypt', '~> 3.1.0', require: 'bcrypt'
 gem 'uglifier',     '2.5.3'
 gem 'coffee-rails', '4.1.0'
 gem 'jquery-rails', '4.0.3'

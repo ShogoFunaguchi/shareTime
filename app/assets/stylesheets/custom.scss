@@ -1,0 +1,111 @@
+@import "materialize";
+
+@font-face {
+  font-family: 'gen-ei';
+  src: font-url('GenEi-P-Heavy_ver8.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+header{
+  margin-left:auto;
+  margin-right:auto;
+  .logo{
+    font-size:40px;
+    padding:40px;
+    .icon{
+      padding:10px;
+    }
+  }
+}
+
+//signup
+.signup{
+  margin-left: auto;
+  margin-right: auto;
+  width:750px;
+
+  h2 {
+    font-family:'gen-ei';
+    text-align: center;
+    font-size: 30px;
+    color: grey;
+    margin:10px;
+  }
+  .card-panel{
+    width: 500px;
+    height: auto;
+    margin-right:auto;
+    margin-left:auto;
+
+  }
+
+.form{
+  padding-left:20px;
+  }
+
+.btn{
+  margin-left:auto;
+  margin-right:auto;
+}
+
+}
+
+//エラーメッセージフォーム
+.error_message_box{
+
+  margin-top:10px;
+  margin-bottom:10px;
+
+  p{
+    color:grey;
+    padding-left:20px;
+    padding-top:3px;
+    padding-bottom:3px;
+    border-radius: 3px;
+  }
+
+  .error{
+    color:grey;
+    width:auto;
+    padding:5px;
+  }
+}
+
+//ユーザー一覧
+.display-user{
+
+  .team-name {
+
+    margin-top:20px;
+    width:auto;
+    height:auto;
+
+      h2{
+        font-family:'gen-ei';
+        font-size:40px;
+        text-align: center;
+        color:grey;
+      }
+
+  }
+
+  .time {
+
+    margin-top:20px;
+    width:auto;
+    height:auto;
+      h2{
+        font-family:'gen-ei';
+        font-size:40px;
+        text-align: center;
+        color:grey;
+      }
+  }
+
+  .name_field{
+
+    margin-right: auto;
+    margin-left:auto;
+  }
+}

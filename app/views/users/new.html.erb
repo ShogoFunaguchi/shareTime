@@ -1,0 +1,32 @@
+<div class="card-panel signup">
+
+<div class="card-panel signup_title">
+    <h2>ー　Sign Up　ー</h2>
+</div>
+
+<div class="row">
+
+
+  <%= form_for(@user)  do |f| %>
+
+  <%= render 'shared/error_message' %>
+
+    <%= f.label "ニックネーム", class:'form' %>
+    <%= f.text_field :name, placeholder:"projects-name" %>
+
+    <%= f.label "メールアドレス", class:'form' %>
+    <%= f.text_field :email, placeholder:"projects-name@example.com" %>
+
+    <%= f.label "パスワード",class:'form' %>
+    <%= f.password_field :password %>
+
+    <%= f.label "パスワード（確認）",class:'form' %>
+    <%= f.password_field :password_confirmation %>
+
+    <%= hidden_field_tag(:team_id, @team.id) %>
+
+    <%= f.submit "メンバーになる！", class:"btn form-btn" %>
+
+  <% end %>
+</div>
+</div>
