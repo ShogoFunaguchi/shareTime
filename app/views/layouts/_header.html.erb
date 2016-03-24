@@ -4,17 +4,27 @@
   <div class="nav_wrapper">
       <span class="logo">
         <i class="fa fa-clock-o fa-1x icon"></i>
-        <%= link_to "ShareTime",root_path, class: "bland-logo" %>
+        <% if login_team? %>
+          <%= link_to "ShareTime", current_team, class: "bland-logo" %>
+        <% else %>
+          <%= link_to "ShareTime", root_path, class: "bland-logo" %>
+        <% end %>
         <i class="fa fa-share-alt icon"></i>
       </span>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li>hogehoge</li>
-        <li>foobar</li>
         <li class="dropdown">
           <%= link_to "#", class: "dropdown-button" do%>
           <i class="material-icons">settings</i>
           <%end%>
         </li>
+
+        <% if login_team? %>
+          <li><%= link_to "ログアウト", logout_path, method: "delete" %></li>
+          <li><%= link_to "チームページ", current_team %></li>
+        <% else %>
+          <li><%= link_to "ログイン", login_path %></li>
+        <% end %>
+
       </ul>
   </div>
 </nav>

@@ -5,7 +5,7 @@
 
     <div class="team-name card-panel col s6 " >
       <div class="card-panel">
-        <h2><%= @teams.name %></h2>
+        <h2><%= current_team.name %></h2>
       </div>
     </div>
 
@@ -16,20 +16,28 @@
   </div>
 
   <div class="name_field card-panel">
-
-  <div class="card-panel">
-    <div class="row">
       <ul>
-        <li class="col s3"><%= link_to "Yuuzi" ,"#",class:"btn" %></li>
-        <li class="col s3"><%= link_to "Hiroya" ,"#",class:"btn" %></li>
-        <li class="col s3"><%= link_to "Chihiro" ,"#",class:"btn" %></li>
-        <li class="col s3"><%= link_to "Shogo" ,"#",class:"btn" %></li>
+        <% current_team.users.each do |user| %>
+            <div class="card-panel">
+              <div class="row">
+                <li><%= link_to user.name ,"#", class: "btn waves-effect waves-light col s3" %>
+                    <span class="col s1">10</span>
+                    <span class="col s8">
+                      <div class="progress"><div class="determinate" style="width: 20%"></div>
+                      </div>
+                    </span>
+                </li>
+              </div>
+            </div>
+        <% end %>
       </ul>
-    </div>
-  </div>
+
 <hr>
+
     <div class="add_user">
-      <a class="btn-floating btn-large waves-effect waves-light" href="#"><i class="fa fa-plus"></i></a>
+      <%= link_to signup_users_path,class:"btn-floating btn-large waves-effect waves-light" do %>
+        <i class="fa fa-plus"></i>
+      <%end%>
     </div>
 
   </div>

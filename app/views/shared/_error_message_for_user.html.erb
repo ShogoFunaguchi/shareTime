@@ -1,0 +1,16 @@
+<% if @user.errors.any? %>
+
+<div class="error_message_box card-panel">
+
+  <p>エラー：以下を確認してみてください</p>
+
+  <div class="messages">
+    <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <div class="error card-panel "><li>・<%= message %></li></div>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<% end %>

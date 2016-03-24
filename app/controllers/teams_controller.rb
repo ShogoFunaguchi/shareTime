@@ -6,6 +6,7 @@ class TeamsController < ApplicationController
   def show
     @teams = Team.find(params[:id])
   end
+
   def create
     @teams = Team.new(team_params)
     if @teams.save
