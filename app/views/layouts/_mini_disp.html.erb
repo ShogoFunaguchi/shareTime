@@ -1,0 +1,11 @@
+<% if login_user? %>
+
+<div class="mini-disp">
+
+  <div class="row">
+    <div class="col s4 offset-s10"><span class="card-panel name" style="border-radius:3px;"><%= current_user.name %></span></div>
+  </div>
+
+</div>
+
+<% end %>

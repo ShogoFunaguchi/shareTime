@@ -22,6 +22,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-stack_explorer'
   gem 'pry-coolline'
+  gem 'bower-rails'
 end
 
 group :test do

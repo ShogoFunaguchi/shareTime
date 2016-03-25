@@ -15,4 +15,6 @@
 //= require turbolinks
 //= require jquery
 //= require materialize-sprockets
+//= require  progressbar.js
 //= require_tree .
+

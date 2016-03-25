@@ -17,20 +17,29 @@
 
   <div class="name_field card-panel">
       <ul>
-        <% current_team.users.each do |user| %>
-            <div class="card-panel">
-              <div class="row">
-                <li><%= link_to user.name ,"#", class: "btn waves-effect waves-light col s3" %>
-                    <span class="col s1">10</span>
-                    <span class="col s8">
-                      <div class="progress"><div class="determinate" style="width: 20%"></div>
-                      </div>
-                    </span>
-                </li>
+        <% if current_team.users %>
+          <% current_team.users.each do |user| %>
+              <div class="card-panel">
+                <div class="row">
+                  <li><%= link_to user.name, login_user_path(:name => user.name), class: "btn waves-effect waves-light col s3" %>
+                      <span class="col s1">10</span>
+                      <span class="col s8">
+                        <div class="progress"><div class="determinate" style="width: 20%"></div>
+                        </div>
+                      </span>
+                  </li>
+                </div>
               </div>
-            </div>
-        <% end %>
+          <% end %>
+        <% else %>
+          <div class="first_time_display">
+              <div class="card-panel">
+                <p>まずはメンバーを登録しましょう。</p>
+                <p>したの「＋」ボタンから。</p>
+              </div>
+          </div>
       </ul>
+      <% end %>
 
 <hr>
 

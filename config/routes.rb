@@ -5,9 +5,14 @@ Rails.application.routes.draw do
 
   get  'signup' => 'teams#new'
   get 'main'=> 'teams#show'
+
   root 'static_pages#home'
   get 'static_pages/about'
   get 'static_pages/start'
+
+
+  get 'login_user' => 'sessions_for_users#new'
+  post 'login_user'=> 'sessions_for_users#create'
 
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'

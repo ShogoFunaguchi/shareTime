@@ -1,7 +1,11 @@
 class UsersController < ApplicationController
   def new
-    @user = User.new
-    @team = Team.find(1)
+    if login_user?
+     redirect_to current_user
+    else
+      @user = User.new
+      
+    end
   end
 
   def create
@@ -17,7 +21,9 @@ class UsersController < ApplicationController
   end
 
   private
+
     def user_params
       params.require(:user).permit(:name,:email,:password,:password_digest,:team_id)
     end
+
 end

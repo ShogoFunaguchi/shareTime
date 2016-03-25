@@ -146,3 +146,43 @@ header{
     margin-left:auto;
   }
 }
+
+//ミニディスプレイ
+.mini-disp{
+  font-family:"gen-ei";
+  padding-top:22px;
+}
+
+//メイン画面
+
+.user-main{
+  .main-panel{
+    height:700px;
+  }
+
+  .timer-background{
+    margin-left:auto;
+    margin-right:auto;
+    height:400px;
+  }
+  .button{
+    width:150px !important;
+    margin-left:auto;
+    margin-right:auto;
+
+    a{
+      margin-top:10px;
+      width:150px;
+      padding-top:30px;
+      height:100px;
+      border-radius:5px;
+      display:inline-block;
+    }
+  }
+
+  .progressbar-text{
+    font-size:50px;
+    font-weight:bold;
+  }
+
+}
