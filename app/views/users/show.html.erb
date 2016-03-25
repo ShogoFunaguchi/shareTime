@@ -15,13 +15,20 @@
   <div id="modal1" class="modal">
     <div class="modal-content">
        <div class="input-field">
-        <select>
-          <option value="" disabled selected>仕事する時間を選択してください</option>
-          <option value="15">15</option>
-          <option value="30">30</option>
-          <option value="60">60</option>
+        <h4>目標時間</h4>
+        <form name="time_form">
+        <select name="box">
+          <option value="15">15分</option>
+          <option value="30">30分</option>
+          <option value="60">60分</option>
+          <option value="120">120分</option>
+          <option value="180">180分</option>
+          <option value="240">240分</option>
+          <option value="300">300分</option>
+          <option value="360">360分</option>
         </select>
-        <button type="submit" class="btn">仕事を始める！</button>
+        </form>
+         <button class="btn setting-time modal-action modal-close">仕事を始める！</button>
       </div>
     </div>
   </div>

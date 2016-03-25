@@ -52,15 +52,22 @@ function showClock1() {
 setInterval('showClock1()',1000);
 
 
-  $('.modal-trigger').leanModal();
+$('.modal-trigger').leanModal();
+$('select').material_select();
+
+//時計の目標時間設定
+$('.input-field .setting-time').click(function(e){
+  
   var seconds = new ProgressBar.Circle('.timer', {
-    duration: 100,
+    duration: 150,
     color: "#FCB03C",
     trailColor: "#ddd",
     strokeWidth:2,
   });
 
-var gettime = 15;
+
+var gettime = document.time_form.box.value ;
+var ttime = gettime-1
 var temptime = gettime * 60
 var second =0;
 var minute =0;
@@ -68,6 +75,8 @@ var minute =0;
 function settime(time){
   if(time<10){
     ret = "0" + time
+  }else if(time==0){
+    ret = "00"
   }else{
     ret = time
   }
@@ -76,7 +85,7 @@ function settime(time){
 
   setInterval(function() {
 
-    disp_minute = settime(gettime - minute);
+    disp_minute = settime(ttime - minute);
     disp_second = settime(59-second);
 
 
@@ -91,6 +100,9 @@ function settime(time){
     }
   }, 1000);
 
+  $('.button ul li .start-button').addClass('disabled');
+  return false;
+});
 </script>
 </body>
 </html>
